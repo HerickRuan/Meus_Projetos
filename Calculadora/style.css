@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(180deg, rgb(85, 169, 197), rgb(74, 132, 170));
+}
+
+section{
+    width: 400px;
+    margin: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+section > h2{
+    margin-top: 0px;
+    text-align: center;
+}
+
+label{
+    padding: 5px;
+    font-weight: normal;
+    font-size: 1.2em;
+    display: inline;
+}
+
+#ival1, #ival2{
+    width: 80px;
+    line-height: 30px;
+}
+
+.botao{
+    margin: auto;
+    margin-top: 25px;
+    width: 100px;
+    display: block;
+    padding: 8px;
+}
+
+#res{
+    text-align: center;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.918);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#res > p{
+    margin-block: 7px;
+    margin-top: 10px;
+}

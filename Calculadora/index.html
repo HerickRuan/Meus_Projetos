@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora do Hérick</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <h1>Caluculadora Inteligente</h1>
+
+    <section id="sec1">
+
+        <h2>Porcentagem</h2>
+
+        <label for="ival1">
+            Valor 1: 
+            <input type="number" id="ival1" required >
+        </label>
+        <label for="ival2">
+            Valor 2: 
+            <input type="number" id="ival2" required>
+        </label>
+
+        <input type="button" value="Calcular" class="botao" onclick="porcent()">
+
+        <div id="res"></div>
+
+    </section>
     
-    
+    <script src="script.js"></script>
 </body>
 </html>
