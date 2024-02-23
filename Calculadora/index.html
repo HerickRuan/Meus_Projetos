@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>Caluculadora Inteligente</h1>
+<a href="" target="_blank"></a>
+    <h1>Calculos Automáticos</h1>
 
     <main id="main1">
         <section id="sec1">
             <h2>Porcentagem</h2>
             <label for="ival1">
                 Valor 1:
-                <input type="number" id="ival1" required >
+                <input type="number" id="ival1" required class="escrever">
             </label>
             <label for="ival2">
                 Valor 2:
-                <input type="number" id="ival2" required>
+                <input type="number" id="ival2" required class="escrever">
             </label>
             <input type="button" value="Calcular" class="botao" onclick="porcent()">
-            <div id="res"></div>
+            <div id="res1" class="res"></div>
         </section>
     </main>
     <main id="main2">
         <section id="sec2">
             <h2>Vida Saudável</h2>
-            <label for="">
-                Sua altura:
-                <input type="number" id="ialt">
+            <label for="ialt">
+                Altura:
+                <input type="number" id="ialt" class="escrever" placeholder="cm">
             </label>
-            <label for="">
-                Seu peso:
-                <input type="number" id="ipeso">
+            <label for="ipeso">
+                Peso:
+                <input type="number" id="ipeso" class="escrever" placeholder="kg">
             </label>
+            <input type="button" value="Calcular" class="botao" onclick="saude()">
+            <div id="res2" class="res"></div>
         </section>
     </main>
     
