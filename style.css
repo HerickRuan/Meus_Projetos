@@ -11,6 +11,7 @@ h1{
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(180deg, rgb(85, 169, 197), rgb(74, 132, 170));
+    font-size: 1.2em;
 }
 
 #main2{
@@ -37,8 +38,7 @@ label{
     font-weight: normal;
     font-size: 1.2em;
     display: block;
-    position: relative;
-    text-align: right;
+    text-align: center;
     left: -40px;
     
 }
@@ -46,14 +46,16 @@ label{
 .escrever{
     width: 80px;
     line-height: 30px;
+    font-size: .8em;
 }
 
 .botao{
     margin: auto;
     margin-top: 25px;
-    width: 100px;
+    width: fit-content;
     display: block;
     padding: 8px;
+    font-size: 1em;
 }
 
 .res{
