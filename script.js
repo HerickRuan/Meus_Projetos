@@ -45,9 +45,9 @@ function saude(){
         
         //quantidade de agua para: 
         //Jovem
-        agua1j = 0.040 * peso
+        aguaJ = 0.040 * peso
         //Adulto
-        agua2a = 0.035 * peso
+        aguaA = 0.035 * peso
         //Idoso min
         aguai1 = 0.025 * peso
         //Idoso max
@@ -56,11 +56,10 @@ function saude(){
         if(idade >= 70){
             res2.innerHTML += `<p>Você deve beber de <strong>${aguai1.toFixed(1)}</strong> a <strong>${aguai2.toFixed(1)}</strong> litros de água por dia.</p>`
         } else if (idade >= 18){
-
+            res2.innerHTML += `<p>Você deve beber <strong>${aguaA.toFixed(1)}</strong> litros de água por dia.</p>`
         } else if(idade >= 10){
-
-        } else{
-
+            res2.innerHTML += `<p>Você deve beber <strong>${aguaJ.toFixed(1)}</strong> litros de água por dia.</p>`
+            
         }
         
     }
