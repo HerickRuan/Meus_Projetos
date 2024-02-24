@@ -37,7 +37,10 @@ label{
     font-weight: normal;
     font-size: 1.2em;
     display: block;
+    position: relative;
     text-align: right;
+    left: -40px;
+    
 }
 
 .escrever{
