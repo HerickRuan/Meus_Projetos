@@ -61,7 +61,7 @@ function saude(){
         }
 
         res2.innerHTML += `<p id="p_res2">Seu <a href="https://pt.wikipedia.org/wiki/Índice_de_massa_corporal" target="_blank">IMC</a> é: ${imc.toFixed(1)} - ${resultado}</p>`
-          
+          //falta creatina e agua
     }
 
 }
