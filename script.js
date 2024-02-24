@@ -43,6 +43,26 @@ function saude(){
 
         res2.innerHTML += `<p id="p_res2">Seu <a href="https://pt.wikipedia.org/wiki/Índice_de_massa_corporal" target="_blank">IMC</a> é: ${imc.toFixed(1)} - ${resultado}</p>`
         
+        //quantidade de agua para: 
+        //Jovem
+        agua1j = 0.040 * peso
+        //Adulto
+        agua2a = 0.035 * peso
+        //Idoso min
+        aguai1 = 0.025 * peso
+        //Idoso max
+        aguai2 = 0.035 * peso 
+
+        if(idade >= 70){
+            res2.innerHTML += `<p>Você deve beber de <strong>${aguai1.toFixed(1)}</strong> a <strong>${aguai2.toFixed(1)}</strong> litros de água por dia.</p>`
+        } else if (idade >= 18){
+
+        } else if(idade >= 10){
+
+        } else{
+
+        }
+        
     }
 
 }

@@ -24,7 +24,14 @@ body{
 
 }
 
-section > h2{
+section{
+    width: fit-content;
+    margin: auto;
+    text-align: right;
+}
+
+
+#main2 > h2{
     margin-top: 0px;
     text-align: center;
 }
@@ -34,9 +41,6 @@ label{
     font-weight: normal;
     font-size: 1.2em;
     display: block;
-    text-align: center;
-    left: -40px;
-    
 }
 
 .escrever{
@@ -57,23 +61,12 @@ label{
 .res{
     text-align: center;
     color: black;
-    background-color: rgba(255, 255, 255, 0.918);
+    background-color: rgba(255, 255, 255, 0.76);
     border-radius: 8px;
     margin-top: 20px;
     padding: 10px;
     display: none;
 }
-
-#res1 > p{
-    margin-block: 7px;
-    margin-top: 10px;
-}
-
-#sec2 > div > p {
-    padding: 10px ;
-    margin: 0px;
-}
-
 
 
 .verm{
