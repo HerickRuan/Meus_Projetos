@@ -22,11 +22,17 @@ function saude(){
     res2.style.display = "block" 
     res2.innerHTML = ''
 
+    //Verificando se os inputs estão vázios.
+    if((idadet.value || altt.value || pesot.value) === "" ){
+        res2.innerHTML +=`Preencha todos os campos.`
 
-    if((alt || peso) <= 0 || idade > 120){
+    //Verificando se o usuário não inseriu valores irreais.
+    } else if(idade > 120 || idade < 5 || alt < 80 || peso < 20){
         res2.innerHTML +=`Insira um valor válido.`
 
+    //Código principal.
     } else {
+        //Cálculos para IMC
         resultado = ''
         imc = peso / ((alt/100) ** 2)
         pesoi1 = 18.5 * ((alt/100) ** 2)
@@ -69,19 +75,23 @@ function saude(){
             imagens.style.backgroundImage = 'url('+abaixo+')'
 
         }
-
+        //Exibir o resultado IMC.
         res2.innerHTML += `<p id="p_res2">Seu <a href="https://pt.wikipedia.org/wiki/Índice_de_massa_corporal" target="_blank">IMC</a> é: ${imc.toFixed(1)} - ${resultado}</p>`
         
-        //quantidade de agua para: 
-        //Jovem
+        //Quantidade de água para: 
+        //Jovem:
         aguaJ = 0.040 * peso
-        //Adulto
+
+        //Adulto:
         aguaA = 0.035 * peso
-        //Idoso min
+
+        //Idoso mín:
         aguaI1 = 0.025 * peso
-        //Idoso max
+
+        //Idoso max:
         aguaI2 = 0.035 * peso 
 
+        //Condições para quantidade de água.
         if(idade >= 70){
             res2.innerHTML += `<p>Você deve beber de <strong>${aguaI1.toFixed(1)}</strong> a <strong>${aguaI2.toFixed(1)}</strong> litros de água por dia.</p>`
         } else if (idade >= 18){
@@ -90,7 +100,7 @@ function saude(){
             res2.innerHTML += `<p>Você deve beber <strong>${aguaJ.toFixed(1)}</strong> litros de água por dia.</p>`
         }
         
-        //Posicionar itens 
+        //Posicionar elementos para inserir a imagem.
         imagens.style.display = "block"
         section.style.float = "left"
         section.style.marginRight = "10px"
