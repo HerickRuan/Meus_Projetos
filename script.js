@@ -49,17 +49,16 @@ function saude(){
         //Adulto
         aguaA = 0.035 * peso
         //Idoso min
-        aguai1 = 0.025 * peso
+        aguaI1 = 0.025 * peso
         //Idoso max
-        aguai2 = 0.035 * peso 
+        aguaI2 = 0.035 * peso 
 
         if(idade >= 70){
-            res2.innerHTML += `<p>Você deve beber de <strong>${aguai1.toFixed(1)}</strong> a <strong>${aguai2.toFixed(1)}</strong> litros de água por dia.</p>`
+            res2.innerHTML += `<p>Você deve beber de <strong>${aguaI1.toFixed(1)}</strong> a <strong>${aguaI2.toFixed(1)}</strong> litros de água por dia.</p>`
         } else if (idade >= 18){
             res2.innerHTML += `<p>Você deve beber <strong>${aguaA.toFixed(1)}</strong> litros de água por dia.</p>`
         } else if(idade >= 10){
             res2.innerHTML += `<p>Você deve beber <strong>${aguaJ.toFixed(1)}</strong> litros de água por dia.</p>`
-            
         }
         
     }
