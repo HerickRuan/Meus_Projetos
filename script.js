@@ -27,6 +27,10 @@ function saude(){
     //Verificando se os inputs estão vázios.
     if((idadet.value || altt.value || pesot.value) === "" ){
         res2.innerHTML +=`Preencha todos os campos.`
+        msgIMC.style.display = "none"
+        imagens.style.display = "none"
+        section.style.float = "none"
+        section.style.marginRight = ""
 
     //Verificando se o usuário não inseriu valores irreais.
     } else if(idade > 120 || idade < 5 || alt < 80 || alt > 250 || peso < 20 || peso > 200){
@@ -36,7 +40,7 @@ function saude(){
         imagens.style.display = "none"
         section.style.float = "none"
         section.style.marginRight = ""
-        main2.style.height = ""
+        msgIMC.style.display = "none"
 
     //Código principal.
     } else {
@@ -54,7 +58,7 @@ function saude(){
             imagens.style.backgroundImage = 'url('+obes3+')'
 
             msgIMC.innerHTML = `Aqui o sinal é vermelho, com forte probabilidade de já existirem doenças muito graves associadas. O tratamento deve ser ainda mais urgente.`
-            msgIMC.style.marginTop = "15px"
+
             msgIMC.style.fontSize = ".7em"
             imagens.style.height = "235px"
 
@@ -66,7 +70,7 @@ function saude(){
             imagens.style.backgroundImage = 'url('+obes2+')'
 
             msgIMC.innerHTML = `Mesmo que seus exames aparentem estar normais, é hora de se cuidar, iniciando mudanças no estilo de vida com o acompanhamento próximo de profissionais de saúde.`
-            msgIMC.style.marginTop = "10px"
+
             msgIMC.style.fontSize = ".7em"
             imagens.style.height = "235px"
 
@@ -77,7 +81,7 @@ function saude(){
             imagens.style.backgroundImage = 'url('+obes1+')'
 
             msgIMC.innerHTML = `Sinal de alerta! Chegou na hora de se cuidar, mesmo que seus exames sejam normais. Vamos dar início a mudanças hoje! Cuide de sua alimentação. Você precisa iniciar um acompanhamento com nutricionista e/ou endocrinologista.`
-            msgIMC.style.marginTop = "7px"
+
             msgIMC.style.fontSize = ".65em"
             imagens.style.height = "225px"
 
@@ -88,7 +92,7 @@ function saude(){
             imagens.style.backgroundImage = 'url('+sobrepes+')'
 
             msgIMC.innerHTML = `Isso é, na verdade, uma pré-obesidade e muitas pessoas nessa faixa já apresentam doenças associadas, como diabetes e hipertensão. Importante rever hábitos e buscar ajuda antes de, por uma série de fatores, entrar na faixa da obesidade pra valer.`
-            msgIMC.style.marginTop = "7px"
+
             msgIMC.style.fontSize = ".65em"
             imagens.style.height = "225px"
 
@@ -99,7 +103,7 @@ function saude(){
             imagens.style.backgroundImage = 'url('+normal+')'
 
             msgIMC.innerHTML = `Que bom que você está com o peso normal! E o melhor jeito de continuar assim é mantendo um estilo de vida ativo e uma alimentação equilibrada.`
-            msgIMC.style.marginTop = "25px"
+
             imagens.style.height = "225px"
 
         } else if (imc < 18.5){
@@ -109,7 +113,7 @@ function saude(){
             imagens.style.backgroundImage = 'url('+abaixo+')'
             msgIMC.innerHTML = `Procure um médico. Algumas pessoas têm um baixo peso por características do seu organismo e tudo bem. Outras podem estar enfrentando problemas, como a desnutrição. É preciso saber qual é o caso.`
 
-            msgIMC.style.marginTop = "15px"
+
             imagens.style.height = "225px"
 
         }
@@ -142,7 +146,6 @@ function saude(){
         imagens.style.display = "block"
         section.style.float = "left"
         section.style.marginRight = "10px"
-        main2.style.height = "420px"
         msgIMC.style.display = "block"
 
 
