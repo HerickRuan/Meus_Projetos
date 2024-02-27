@@ -16,6 +16,7 @@ h1{
 #main2{
     margin: auto;
     width: fit-content;
+    max-width: 340px;
     color: white;
     background-color: rgba(0, 0, 0, 0.466);
     padding: 20px;
@@ -35,15 +36,28 @@ section{
 
 #imagens{
     width: 130px;
-    height: 350px;
-    border: solid 1px;
-
+    height: 225px;
     background-color: white;
     border-radius: 5px;
     display: none;
     float: right;
 
     background-size: cover;
+}
+
+#msgIMC{
+    background-color: #F2F2F2;
+    color: black;
+    margin-top: 15px;
+    padding: 7px;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: .7em;
+    text-align: justify;
+
+
+    display: none;
+    float: left;/*Não sei pq, mas sem isso as letras ficam dispersas.*/
 }
 
 

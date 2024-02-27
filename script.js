@@ -5,6 +5,8 @@ var idadet = document.querySelector('#iidade')
 var imagens = document.querySelector('#imagens')
 var section = document.querySelector('#sec2')
 var main2 = document.querySelector('#main2')
+var msgIMC = document.querySelector('#msgIMC')
+
 //Imagens
 var abaixo = 'Imagens/abaixo.png'
 var normal = 'Imagens/normal.png'
@@ -51,11 +53,22 @@ function saude(){
 
             imagens.style.backgroundImage = 'url('+obes3+')'
 
+            msgIMC.innerHTML = `Aqui o sinal é vermelho, com forte probabilidade de já existirem doenças muito graves associadas. O tratamento deve ser ainda mais urgente.`
+            msgIMC.style.marginTop = "15px"
+            msgIMC.style.fontSize = ".7em"
+            imagens.style.height = "235px"
+
         } else if (imc >= 35){
             resultado = 'Obesidade Grau II'
             res2.innerHTML += `O peso ideal seria entre <span class="verm">${pesoi1.toFixed(1)} Kg</span> e <span class="verm">${pesoi2.toFixed(1)} Kg</span>.`
+            
 
             imagens.style.backgroundImage = 'url('+obes2+')'
+
+            msgIMC.innerHTML = `Mesmo que seus exames aparentem estar normais, é hora de se cuidar, iniciando mudanças no estilo de vida com o acompanhamento próximo de profissionais de saúde.`
+            msgIMC.style.marginTop = "10px"
+            msgIMC.style.fontSize = ".7em"
+            imagens.style.height = "235px"
 
         } else if (imc >= 30){
             resultado = 'Obesidade Grau I'
@@ -63,22 +76,41 @@ function saude(){
 
             imagens.style.backgroundImage = 'url('+obes1+')'
 
+            msgIMC.innerHTML = `Sinal de alerta! Chegou na hora de se cuidar, mesmo que seus exames sejam normais. Vamos dar início a mudanças hoje! Cuide de sua alimentação. Você precisa iniciar um acompanhamento com nutricionista e/ou endocrinologista.`
+            msgIMC.style.marginTop = "7px"
+            msgIMC.style.fontSize = ".65em"
+            imagens.style.height = "225px"
+
         } else if (imc >= 25){
             resultado = 'Sobrepeso'
             res2.innerHTML += `O peso ideal seria entre <span class="verm">${pesoi1.toFixed(1)} Kg</span> e <span class="verm">${pesoi2.toFixed(1)} Kg</span>.`
 
             imagens.style.backgroundImage = 'url('+sobrepes+')'
 
+            msgIMC.innerHTML = `Isso é, na verdade, uma pré-obesidade e muitas pessoas nessa faixa já apresentam doenças associadas, como diabetes e hipertensão. Importante rever hábitos e buscar ajuda antes de, por uma série de fatores, entrar na faixa da obesidade pra valer.`
+            msgIMC.style.marginTop = "7px"
+            msgIMC.style.fontSize = ".65em"
+            imagens.style.height = "225px"
+
+
         } else if (imc >= 18.5){
             resultado = 'Peso Normal'
 
             imagens.style.backgroundImage = 'url('+normal+')'
+
+            msgIMC.innerHTML = `Que bom que você está com o peso normal! E o melhor jeito de continuar assim é mantendo um estilo de vida ativo e uma alimentação equilibrada.`
+            msgIMC.style.marginTop = "25px"
+            imagens.style.height = "225px"
 
         } else if (imc < 18.5){
             resultado = 'Baixo Peso'
             res2.innerHTML += `<p>O peso ideal seria entre <span class="verm">${pesoi1.toFixed(1)}Kg</span> e <span class="verm">${pesoi2.toFixed(1)}Kg</span>.</p>`
 
             imagens.style.backgroundImage = 'url('+abaixo+')'
+            msgIMC.innerHTML = `Procure um médico. Algumas pessoas têm um baixo peso por características do seu organismo e tudo bem. Outras podem estar enfrentando problemas, como a desnutrição. É preciso saber qual é o caso.`
+
+            msgIMC.style.marginTop = "15px"
+            imagens.style.height = "225px"
 
         }
         //Exibir o resultado IMC.
@@ -110,7 +142,9 @@ function saude(){
         imagens.style.display = "block"
         section.style.float = "left"
         section.style.marginRight = "10px"
-        main2.style.height = "450px"
+        main2.style.height = "420px"
+        msgIMC.style.display = "block"
+
 
 
 
