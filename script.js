@@ -27,8 +27,14 @@ function saude(){
         res2.innerHTML +=`Preencha todos os campos.`
 
     //Verificando se o usuário não inseriu valores irreais.
-    } else if(idade > 120 || idade < 5 || alt < 80 || peso < 20){
+    } else if(idade > 120 || idade < 5 || alt < 80 || alt > 250 || peso < 20 || peso > 200){
         res2.innerHTML +=`Insira um valor válido.`
+
+        //Realocar os elementos e tirar a imagem
+        imagens.style.display = "none"
+        section.style.float = "none"
+        section.style.marginRight = ""
+        main2.style.height = ""
 
     //Código principal.
     } else {
@@ -104,7 +110,7 @@ function saude(){
         imagens.style.display = "block"
         section.style.float = "left"
         section.style.marginRight = "10px"
-        main2.style.height = "420px"
+        main2.style.height = "450px"
 
 
 
