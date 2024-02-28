@@ -25,7 +25,7 @@ function saude(){
     res2.innerHTML = ''
 
     //Verificando se os inputs estão vázios.
-    if((idadet.value || altt.value || pesot.value) === "" ){
+    if(idadet.value === "" || altt.value === "" || pesot.value === ""){
         res2.innerHTML +=`Preencha todos os campos.`
         msgIMC.style.display = "none"
         imagens.style.display = "none"
